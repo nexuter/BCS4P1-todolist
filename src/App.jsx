@@ -21,7 +21,7 @@ function App() {
       />
       <ul className="mt-8">
         {todos.map((v, i) => (
-          <Todo key={i} todo={v} index={i} />
+          <Todo key={i} todo={v} index={i} todos={todos} setTodos={setTodos} />
         ))}
       </ul>
     </main>
