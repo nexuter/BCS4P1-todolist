@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CreateTodo from "./components/CreateToDo";
+import Todo from "./components/ToDo";
 
 function App() {
   const [todoIds, setTodoIds] = useState(2);
@@ -20,11 +21,7 @@ function App() {
       />
       <ul className="mt-8">
         {todos.map((v, i) => (
-          <li key={i} className="bg-gray-100 w-96 p-4">
-            <span className="w-1/12 inline-block text-center">{v.id}</span>
-            <span className="pl-4 w-3/4 inline-block">{v.title}</span>
-            <button className="w-1/12 inline-block text-center">Delete</button>
-          </li>
+          <Todo key={i} todo={v} index={i} />
         ))}
       </ul>
     </main>
